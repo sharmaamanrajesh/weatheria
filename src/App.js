@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import WeatherCard from './components/WeatherCard';
 import SearchBar from './components/SearchBar';
-import { WiCloud, WiDaySunny, WiRain, WiWind } from 'react-icons/wi';
+import { WiCloud, WiDaySunny, WiRain, WiStrongWind } from 'react-icons/wi';
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -137,7 +137,7 @@ function App() {
 
               <div className="weather-details">
                 <div className="detail-card">
-                  <WiWind className="detail-icon" />
+                  <WiStrongWind className="detail-icon" />
                   <div className="detail-info">
                     <p className="detail-label">Wind Speed</p>
                     <p className="detail-value">{weather.windSpeed} mph</p>

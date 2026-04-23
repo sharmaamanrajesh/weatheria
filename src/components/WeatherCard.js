@@ -1,5 +1,5 @@
 import React from 'react';
-import { WiDaySunny, WiCloudy, WiRain, WiCloudRain } from 'react-icons/wi';
+import { WiDaySunny, WiCloudy, WiRain, WiDayCloudyHigh } from 'react-icons/wi';
 import './WeatherCard.css';
 
 function WeatherCard({ day }) {
@@ -12,7 +12,7 @@ function WeatherCard({ day }) {
       case 'rainy':
         return <WiRain className="card-icon rainy" />;
       case 'partly cloudy':
-        return <WiCloudRain className="card-icon partly-cloudy" />;
+        return <WiDayCloudyHigh className="card-icon partly-cloudy" />;
       default:
         return <WiDaySunny className="card-icon sunny" />;
     }
