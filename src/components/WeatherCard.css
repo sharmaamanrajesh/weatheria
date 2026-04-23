@@ -1,0 +1,129 @@
+.weather-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.weather-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-day {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.card-icon.sunny {
+  color: #ffd700;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.card-icon.cloudy {
+  color: #e8e8e8;
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-icon.rainy {
+  color: #87ceeb;
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-icon.partly-cloudy {
+  color: #b0e0e6;
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-condition {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.card-temps {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.card-high {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffeb3b;
+}
+
+.card-low {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .weather-card {
+    padding: 1rem 0.75rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+
+  .card-day {
+    font-size: 1rem;
+  }
+
+  .card-high {
+    font-size: 1.2rem;
+  }
+
+  .card-low {
+    font-size: 1rem;
+  }
+}
