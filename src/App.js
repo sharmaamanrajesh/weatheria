@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import WeatherCard from './components/WeatherCard';
 import SearchBar from './components/SearchBar';
-import { WiCloud, WiDaySunny, WiRain, WiStrongWind } from 'react-icons/wi';
+import { WiCloud, WiDaySunny, WiStrongWind } from 'react-icons/wi';
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -75,7 +75,7 @@ function App() {
 
   useEffect(() => {
     fetchWeather(city);
-  }, []);
+  }, [city]);
 
   const fetchWeather = (cityName) => {
     setLoading(true);
