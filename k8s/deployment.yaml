@@ -21,6 +21,8 @@ spec:
       labels:
         app: weatheria
     spec:
+      imagePullSecrets:
+      - name: jfrog-pull-secret
       containers:
       - name: weatheria
         image: {{.Values.image}}
